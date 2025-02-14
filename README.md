@@ -24,6 +24,10 @@ Please refer to our docs at [https://filebrowser.org/features](https://filebrows
 
 ## Install
 
+##### Custom Fedora Installation
+
+- **[FEDORA.md](FEDORA.md)**
+
 For installation instructions please refer to our docs at [https://filebrowser.org/installation](https://filebrowser.org/installation).
 
 ## Configuration
