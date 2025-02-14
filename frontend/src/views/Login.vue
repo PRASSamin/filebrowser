@@ -1,8 +1,8 @@
 <template>
   <div id="login" :class="{ recaptcha: recaptcha }">
     <form @submit="submit">
-      <img :src="logoURL" alt="File Browser" />
-      <h1>{{ name }}</h1>
+      <img :src="logoURL" alt="pras wfm" style="width: 150px" />
+      <h1>WFM</h1>
       <div v-if="error !== ''" class="wrong">{{ error }}</div>
 
       <input

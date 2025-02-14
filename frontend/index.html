@@ -10,18 +10,9 @@
 
     <title>File Browser</title>
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/icons/favicon-16x16.png"
-    />
+    <link rel="icon" type="image/png" href="/img/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" />
 
     <!-- Add to home screen for Android and modern mobile browsers -->
     <link
@@ -34,15 +25,9 @@
     <!-- Add to home screen for Safari on iOS/iPadOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="assets" />
+    <meta name="apple-mobile-web-app-title" content="PRAS WFM" />
     <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
 
-    <!-- Add to home screen for Windows -->
-    <meta
-      name="msapplication-TileImage"
-      content="/img/icons/mstile-144x144.png"
-    />
-    <meta name="msapplication-TileColor" content="#2979ff" />
 
     <!-- Inject Some Variables and generate the manifest json -->
     <script>
@@ -77,14 +62,14 @@
         icons: [
           {
             src: window.__prependStaticUrl(
-              "/img/icons/android-chrome-192x192.png"
+              "/img/icons/web-app-manifest-192x192.png"
             ),
             sizes: "192x192",
             type: "image/png",
           },
           {
             src: window.__prependStaticUrl(
-              "/img/icons/android-chrome-512x512.png"
+              "/img/icons/web-app-manifest-512x512.png"
             ),
             sizes: "512x512",
             type: "image/png",

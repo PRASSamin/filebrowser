@@ -17,6 +17,9 @@
 @import "./mobile.css";
 @import "./epubReader.css";
 @import "./mdPreview.css";
+@import "./custom.css";
+@import "./custom.min.css";
+
 
 /* For testing only
  :focus {

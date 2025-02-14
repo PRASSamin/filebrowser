@@ -1,4 +1,4 @@
-const name: string = window.FileBrowser.Name || "File Browser";
+const name: string = window.FileBrowser.Name || "Web File Manager";
 const disableExternal: boolean = window.FileBrowser.DisableExternal;
 const disableUsedPercentage: boolean = window.FileBrowser.DisableUsedPercentage;
 const baseURL: string = window.FileBrowser.BaseURL;
@@ -8,6 +8,7 @@ const recaptchaKey: string = window.FileBrowser.ReCaptchaKey;
 const signup: boolean = window.FileBrowser.Signup;
 const version: string = window.FileBrowser.Version;
 const logoURL = `${staticURL}/img/logo.svg`;
+const prasLogo = `${staticURL}/img/pras.svg`;
 const noAuth: boolean = window.FileBrowser.NoAuth;
 const authMethod = window.FileBrowser.AuthMethod;
 const loginPage: boolean = window.FileBrowser.LoginPage;
@@ -39,4 +40,5 @@ export {
   tusSettings,
   origin,
   tusEndpoint,
+  prasLogo,
 };

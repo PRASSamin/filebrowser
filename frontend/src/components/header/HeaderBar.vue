@@ -1,6 +1,43 @@
 <template>
   <header>
-    <img v-if="showLogo" :src="logoURL" />
+    <div
+      class="logo-container"
+      :style="{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }"
+    >
+      <a href="https://pras.me" target="_blank">
+        <img
+          title="PRAS"
+          v-if="showLogo"
+          :src="prasLogo"
+          alt="pras logo"
+          :style="{ marginTop: '-10px', height: '22px' }"
+        />
+      </a>
+
+      <div
+        :style="{
+          width: '2px',
+          height: '50px',
+          backgroundColor: '#636363',
+          borderRadius: '9999px',
+          rotate: '25deg',
+          marginLeft: '-5px',
+          marginRight: '15px',
+        }"
+      ></div>
+      <a href="/">
+        <img
+          title="Web File Manager"
+          v-if="showLogo"
+          :src="logoURL"
+          :style="{ height: '35px', marginTop: '20px' }"
+        />
+      </a>
+    </div>
     <Action
       v-if="showMenu"
       class="menu-button"
@@ -37,7 +74,7 @@
 <script setup lang="ts">
 import { useLayoutStore } from "@/stores/layout";
 
-import { logoURL } from "@/utils/constants";
+import { logoURL, prasLogo, name } from "@/utils/constants";
 
 import Action from "@/components/header/Action.vue";
 import { computed, useSlots } from "vue";

@@ -77,15 +77,6 @@
           </p>
 
           <p>
-            <label for="theme">{{ t("settings.themes.title") }}</label>
-            <themes
-              class="input input--block"
-              v-model:theme="settings.branding.theme"
-              id="theme"
-            ></themes>
-          </p>
-
-          <p>
             <label for="branding-name">{{ t("settings.instanceName") }}</label>
             <input
               class="input input--block"

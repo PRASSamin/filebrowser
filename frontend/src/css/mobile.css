@@ -126,8 +126,8 @@
   header .menu-button {
     display: inherit;
   }
-  header img {
-    display: none;
+  header .logo-container {
+    display: none !important;
   }
   #listing {
     margin-bottom: 5em;
