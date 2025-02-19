@@ -19,6 +19,7 @@
       </a>
 
       <div
+        v-if="showLogo"
         :style="{
           width: '2px',
           height: '50px',
@@ -74,7 +75,7 @@
 <script setup lang="ts">
 import { useLayoutStore } from "@/stores/layout";
 
-import { logoURL, prasLogo, name } from "@/utils/constants";
+import { logoURL, prasLogo } from "@/utils/constants";
 
 import Action from "@/components/header/Action.vue";
 import { computed, useSlots } from "vue";
