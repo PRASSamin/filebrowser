@@ -1,6 +1,7 @@
 <template>
   <header>
     <div
+      v-if="showLogo"
       class="logo-container"
       :style="{
         display: 'flex',

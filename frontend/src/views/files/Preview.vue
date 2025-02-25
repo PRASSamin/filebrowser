@@ -283,7 +283,7 @@ const subtitles = computed(() => {
 });
 
 const videoOptions = computed(() => {
-  return { autoplay: autoPlay.value, controls: true };
+  return { autoplay: autoPlay.value };
 });
 
 watch(route, () => {
