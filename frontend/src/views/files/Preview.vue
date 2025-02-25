@@ -139,7 +139,7 @@
       @mouseleave="hoverNav = false"
       :class="{ hidden: !hasPrevious || !showNav }"
       :aria-label="$t('buttons.previous')"
-      :title="$t('buttons.previous')"
+      title="Previous(Ctrl+Left Arrow)"
     >
       <i class="material-icons">chevron_left</i>
     </button>
@@ -149,7 +149,7 @@
       @mouseleave="hoverNav = false"
       :class="{ hidden: !hasNext || !showNav }"
       :aria-label="$t('buttons.next')"
-      :title="$t('buttons.next')"
+      title="Next(Ctrl+Right Arrow)"
     >
       <i class="material-icons">chevron_right</i>
     </button>
@@ -334,20 +334,20 @@ const next = () => {
 };
 
 const key = (event: KeyboardEvent) => {
-  if (layoutStore.currentPrompt !== null) {
-    return;
-  }
-  if (event.which === 13 || event.which === 39) {
-    // right arrow
+  if (layoutStore.currentPrompt !== null) return;
+
+  if (event.ctrlKey && event.which === 39) {
+    // Ctrl + Right Arrow → Next video
     if (hasNext.value) next();
-  } else if (event.which === 37) {
-    // left arrow
+  } else if (event.ctrlKey && event.which === 37) {
+    // Ctrl + Left Arrow → Previous video
     if (hasPrevious.value) prev();
   } else if (event.which === 27) {
-    // esc
+    // Esc → Close player
     close();
   }
 };
+
 const updatePreview = async () => {
   if (player.value && player.value.paused && !player.value.ended) {
     autoPlay.value = false;

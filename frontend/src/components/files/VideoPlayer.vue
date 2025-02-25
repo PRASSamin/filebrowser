@@ -31,10 +31,7 @@ import "videojs-hotkeys";
 import "video.js/dist/video-js.min.css";
 import "videojs-mobile-ui/dist/videojs-mobile-ui.css";
 import Cookies from "js-cookie";
-// import "@videojs/themes/dist/city/index.css";
 import "@videojs/themes/dist/fantasy/index.css";
-// import "@videojs/themes/dist/forest/index.css";
-// import "@videojs/themes/sea/index.css";
 
 const videoPlayer = ref<HTMLElement | null>(null);
 const player = ref<Player | null>(null);
