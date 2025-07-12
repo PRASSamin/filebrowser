@@ -46,6 +46,20 @@ filebrowser config set --branding.theme dark
 # dark | light | auto
 ```
 
+
+##### Prepare Filebrowser View:
+
+```bash
+mkdir -p /home/pras/FileBrowserView
+
+ln -s /home/pras/ /home/pras/FileBrowserView/Home # Home -> /home/pras
+# more if needed
+
+# dark | light | auto
+```
+
+
+
 ## 3. Create a Systemd Service for FileBrowser
 
 Create a systemd service file:
@@ -63,7 +77,7 @@ After=network.target
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/filebrowser -a 0.0.0.0 -p 9696 -r {{ Root Directory || /home/pras/FileBrowserRoot }} -d {{ Database Location || /home/filebrowser.db }}
+ExecStart=/usr/local/bin/filebrowser -a 0.0.0.0 -p 9696 -r {{ Root Directory || /home/pras/FileBrowserView }} -d {{ Database Location || /home/filebrowser.db }}
 Restart=always
 
 [Install]
@@ -92,8 +106,8 @@ If you encounter permission errors, adjust the file permissions:
 sudo chown root:root /home/filebrowser.db
 sudo chmod 644 /home/filebrowser.db
 
-sudo chown -R root:root {{ Root Directory || /home/pras/FileBrowserRoot }}
-sudo chmod -R 755 {{ Root Directory || /home/pras/FileBrowserRoot }}
+sudo chown -R root:root {{ Root Directory || /home/pras/FileBrowserView }}
+sudo chmod -R 755 {{ Root Directory || /home/pras/FileBrowserView }}
 
 sudo chown root:root /usr/local/bin/filebrowser
 sudo chmod 755 /usr/local/bin/filebrowser
@@ -124,7 +138,7 @@ If it works after disabling SELinux, you can permanently allow FileBrowser:
 ```bash
 sudo chcon -t bin_t /usr/local/bin/filebrowser
 sudo chcon -t var_t /home/filebrowser.db
-sudo chcon -t var_t /home/pras/FileBrowserRoot
+sudo chcon -t var_t /home/pras/FileBrowserView
 ```
 
 ## 5. Set Up Apache Reverse Proxy
